@@ -1,4 +1,7 @@
 ﻿using Microsoft.Extensions.Logging;
+#if ANDROID
+using Microsoft.Maui.Controls.Compatibility.Platform.Android;
+#endif
 
 namespace RemoveMauiEntryBorder;
 
@@ -15,9 +18,6 @@ public static class MauiProgram
 				fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
 			});
 
-#if ANDROID
-using Microsoft.Maui.Controls.Compatibility.Platform.Android;
-#endif
         // Remove Entry control underline
         Microsoft.Maui.Handlers.EntryHandler.Mapper.AppendToMapping("CustomEntry", (handler, view) =>
         {
