@@ -30,6 +30,18 @@
                 SemanticProperties.HeadingLevel="Level2"
                 Text="Welcome to .NET Multi-platform App UI" />
 
+            <Frame
+                x:Name="entryParent"
+                Margin="5"
+                Padding="10,0"
+                BackgroundColor="{AppThemeBinding Dark=#30363d,
+                                                  Light=WhiteSmoke}"
+                CornerRadius="24"
+                HasShadow="True"
+                HeightRequest="48">
+                <Entry VerticalOptions="CenterAndExpand" />
+            </Frame>
+
         </VerticalStackLayout>
     </ScrollView>
 
